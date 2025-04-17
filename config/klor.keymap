@@ -42,7 +42,7 @@
                 <&kp>,
                 <&kp>;
         };
-mo_tog: behavior_mo_tog {
+       mo_tog: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
             label = "mo_tog";
             #binding-cells = <2>;
