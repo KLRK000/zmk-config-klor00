@@ -174,15 +174,8 @@
 &kp TAB  &kp A       &kp S       &kp D        &hm LSHFT F  &kp G                                   &kp H        &hm RSHFT J  &kp K           &kp L         &kp SEMI  &kp SQT
 &kp DEL  &hm LGUI Z  &hm LALT X  &hm LCTRL C  &hm LSHFT V  &kp B      &kp K_MUTE  &kp LC(UP)       &hm RSHFT N  &hm RALT M   &hm RGUI COMMA  &hm RGUI DOT  &kp FSLH  &kp BSLH
                                  &kp DEL      &kp BSPC     &mo LOWER  &kp LALT    &rgb_ug RGB_EFF  &mo RAISE    &kp SPACE    &kp RET
-            >;
-
-&left_encoder {
-    bindings = <&left_encoder_behavior>;
-};
-
-&right_encoder {
-    bindings = <&right_encoder_behavior>;
-};
+                >;
+            sensor-bindings = <&left_encoder_behavior>; <&right_encoder_behavior>;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -209,14 +202,7 @@
 &trans           &trans             &kp PG_UP  &kp DOWN  &kp PG_DN  &kp LPAR  &trans  &trans  &kp RPAR    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
                                                &trans    &trans     &trans    &trans  &trans  &kp DELETE  &kp KP_N0  &trans
             >;
-
-&left_encoder {
-    bindings = <&left_encoder_behavior>;
-};
-
-&right_encoder {
-    bindings = <&right_encoder_behavior>;
-};
+            sensor-bindings = <&left_encoder_behavior>; <&right_encoder_behavior>;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -243,13 +229,7 @@
 &rgb_ug RGB_COLOR_HSB(128,100,100)  &kp F1    &kp F2  &kp F3    &kp F4          &kp F5     &trans  &trans  &kp F11    &trans          &trans     &kp UNDER  &kp PLUS   &trans
                                                       &trans    &trans          &trans     &trans  &trans  &trans     &trans          &trans
             >;
-&left_encoder {
-    bindings = <&left_encoder_behavior>;
-};
-
-&right_encoder {
-    bindings = <&right_encoder_behavior>;
-};
+            sensor-bindings = <&left_encoder_behavior>; <&right_encoder_behavior>;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -276,14 +256,7 @@
 &trans  &bt BT_PRV  &trans  &trans  &kp KP_N6  &trans  &trans  &trans  &bt BT_PRV  &trans  &trans  &trans      &trans      &trans
                             &trans  &trans     &trans  &trans  &trans  &trans      &trans  &trans
             >;
-
-&left_encoder {
-    bindings = <&left_encoder_behavior>;
-};
-
-&right_encoder {
-    bindings = <&right_encoder_behavior>;
-};
+            sensor-bindings = <&left_encoder_behavior>; <&right_encoder_behavior>;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -310,13 +283,7 @@
 &kp DEL  &hm LGUI Z  &hm LALT X  &hm LCTRL C  &hm LSHFT D  &kp V      &kp K_MUTE  &kp LC(UP)  &hm RSHFT K  &hm RALT H   &hm RGUI COMMA  &hm RGUI DOT  &kp FSLH  &kp BSLH
                                  &kp DEL      &kp BSPC     &mo LOWER  &kp LALT    &tog 4      &mo RAISE    &kp SPACE    &kp RET
             >;
-&left_encoder {
-    bindings = <&left_encoder_behavior>;
-};
-
-&right_encoder {
-    bindings = <&right_encoder_behavior>;
-};
+            sensor-bindings = <&left_encoder_behavior>; <&right_encoder_behavior>;
         };
     };
 };
