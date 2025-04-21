@@ -47,6 +47,7 @@
             label = "BCKLIGHT";
             #binding-cells = <2>;
         };
+        
         // Right Encoder: Volume Control + Mute
         right_encoder_behavior: right_encoder_behavior {
             compatible = "zmk,behavior-encoder";
@@ -56,8 +57,13 @@
         // Left Encoder: RGB Brightness + Effect Cycle
         left_encoder_behavior: left_encoder_behavior {
             compatible = "zmk,behavior-encoder";
-            bindings = <&inc_dec_kp RGB_BRI_UP RGB_BRI_DN>, <&rgb_ug RGB_EFF>;
+            bindings = <&inc_dec_kp RGB_VAI RGB_VAD>, <&rgb_ug RGB_EFF>;
         };
+    };
+
+    encoder_config {
+        compatible = "zmk,encoder-config";
+        status = "okay";
     };
 };
 
@@ -68,9 +74,6 @@
 &right_encoder {
     bindings = <&right_encoder_behavior>;
 };
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
