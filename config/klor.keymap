@@ -26,6 +26,15 @@
 #define ADJUST 3
 #define COLE   4
 
+&sensors {
+    left_encoder {
+        triggers-per-rotation = <15>;
+    };
+
+    right_encoder {
+        triggers-per-rotation = <15>;
+    };
+};
 
 / {
     behaviors {
