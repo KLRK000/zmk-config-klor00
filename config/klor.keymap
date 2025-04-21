@@ -57,7 +57,7 @@
         // Left Encoder: RGB Brightness + Effect Cycle
         left_encoder_behavior: left_encoder_behavior {
             compatible = "zmk,behavior-encoder";
-            bindings = <&inc_dec_kp RGB_VAI RGB_VAD>, <&rgb_ug RGB_EFF>;
+            bindings = <&inc_dec_kp &rgb_ug RGB_BRI &rgb_ug RGB_BRD>, <&rgb_ug RGB_EFF>;
         };
     };
 
