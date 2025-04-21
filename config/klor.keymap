@@ -24,6 +24,15 @@
 #define ADJUST 3
 #define COLE   4
 
+&sensors {
+    left_encoder {
+        triggers-per-rotation = <15>;
+    };
+
+    right_encoder {
+        triggers-per-rotation = <15>;
+    };
+};
 / {
     behaviors {
         hm: homerow_mods {
@@ -47,24 +56,6 @@
             label = "BCKLIGHT";
             #binding-cells = <2>;
         };
-        
-        // Right Encoder: Volume Control + Mute
-        right_encoder_behavior: right_encoder_behavior {
-            compatible = "zmk,behavior-encoder";
-            bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>, <&kp C_MUTE>;
-        };
-        
-        // Left Encoder: RGB Brightness + Effect Cycle
-        left_encoder_behavior: left_encoder_behavior {
-            compatible = "zmk,behavior-encoder";
-            bindings = <&inc_dec_kp &rgb_ug RGB_BRI &rgb_ug RGB_BRD>, <&rgb_ug RGB_EFF>;
-        };
-    };
-
-    encoder_config {
-        compatible = "zmk,encoder-config";
-        status = "okay";
-    };
 
     combos {
         compatible = "zmk,combos";
@@ -175,9 +166,8 @@
 &kp DEL  &hm LGUI Z  &hm LALT X  &hm LCTRL C  &hm LSHFT V  &kp B      &kp K_MUTE  &kp LC(UP)       &hm RSHFT N  &hm RALT M   &hm RGUI COMMA  &hm RGUI DOT  &kp FSLH  &kp BSLH
                                  &kp DEL      &kp BSPC     &mo LOWER  &kp LALT    &rgb_ug RGB_EFF  &mo RAISE    &kp SPACE    &kp RET
                 >;
-            sensor-bindings = <&left_encoder_behavior &right_encoder_behavior>;
-        };
-
+                sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp &rgb_ug RGB_BRI &rgb_ug RGB_EFF>;
+                };
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         lower_layer {
@@ -201,9 +191,9 @@
 &rgb_ug RGB_EFF  &trans             &kp LEFT   &kp UP    &kp RIGHT  &kp LBKT                  &kp RBKT    &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS     &trans
 &trans           &trans             &kp PG_UP  &kp DOWN  &kp PG_DN  &kp LPAR  &trans  &trans  &kp RPAR    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
                                                &trans    &trans     &trans    &trans  &trans  &kp DELETE  &kp KP_N0  &trans
-            >;
-            sensor-bindings = <&left_encoder_behavior>; <&right_encoder_behavior>;
-        };
+                    >;
+             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp &rgb_ug RGB_BRI &rgb_ug RGB_EFF>;
+                };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
@@ -229,7 +219,7 @@
 &rgb_ug RGB_COLOR_HSB(128,100,100)  &kp F1    &kp F2  &kp F3    &kp F4          &kp F5     &trans  &trans  &kp F11    &trans          &trans     &kp UNDER  &kp PLUS   &trans
                                                       &trans    &trans          &trans     &trans  &trans  &trans     &trans          &trans
             >;
-            sensor-bindings = <&left_encoder_behavior>; <&right_encoder_behavior>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp &rgb_ug RGB_BRI &rgb_ug RGB_EFF>;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -256,7 +246,7 @@
 &trans  &bt BT_PRV  &trans  &trans  &kp KP_N6  &trans  &trans  &trans  &bt BT_PRV  &trans  &trans  &trans      &trans      &trans
                             &trans  &trans     &trans  &trans  &trans  &trans      &trans  &trans
             >;
-            sensor-bindings = <&left_encoder_behavior>; <&right_encoder_behavior>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp &rgb_ug RGB_BRI &rgb_ug RGB_EFF>;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -283,7 +273,7 @@
 &kp DEL  &hm LGUI Z  &hm LALT X  &hm LCTRL C  &hm LSHFT D  &kp V      &kp K_MUTE  &kp LC(UP)  &hm RSHFT K  &hm RALT H   &hm RGUI COMMA  &hm RGUI DOT  &kp FSLH  &kp BSLH
                                  &kp DEL      &kp BSPC     &mo LOWER  &kp LALT    &tog 4      &mo RAISE    &kp SPACE    &kp RET
             >;
-            sensor-bindings = <&left_encoder_behavior>; <&right_encoder_behavior>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp &rgb_ug RGB_BRI &rgb_ug RGB_EFF>;
         };
     };
 };
