@@ -65,15 +65,7 @@
         compatible = "zmk,encoder-config";
         status = "okay";
     };
-};
 
-&left_encoder {
-    bindings = <&left_encoder_behavior>;
-};
-
-&right_encoder {
-    bindings = <&right_encoder_behavior>;
-};
     combos {
         compatible = "zmk,combos";
 
@@ -184,7 +176,13 @@
                                  &kp DEL      &kp BSPC     &mo LOWER  &kp LALT    &rgb_ug RGB_EFF  &mo RAISE    &kp SPACE    &kp RET
             >;
 
-            sensor-bindings = <&left_encoder_behavior>, <&right_encoder_behavior>;
+&left_encoder {
+    bindings = <&left_encoder_behavior>;
+};
+
+&right_encoder {
+    bindings = <&right_encoder_behavior>;
+};
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -212,7 +210,13 @@
                                                &trans    &trans     &trans    &trans  &trans  &kp DELETE  &kp KP_N0  &trans
             >;
 
-            sensor-bindings = <&left_encoder_behavior>, <&right_encoder_behavior>;
+&left_encoder {
+    bindings = <&left_encoder_behavior>;
+};
+
+&right_encoder {
+    bindings = <&right_encoder_behavior>;
+};
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -239,8 +243,13 @@
 &rgb_ug RGB_COLOR_HSB(128,100,100)  &kp F1    &kp F2  &kp F3    &kp F4          &kp F5     &trans  &trans  &kp F11    &trans          &trans     &kp UNDER  &kp PLUS   &trans
                                                       &trans    &trans          &trans     &trans  &trans  &trans     &trans          &trans
             >;
+&left_encoder {
+    bindings = <&left_encoder_behavior>;
+};
 
-            sensor-bindings = <&left_encoder_behavior>, <&right_encoder_behavior>;
+&right_encoder {
+    bindings = <&right_encoder_behavior>;
+};
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -268,7 +277,13 @@
                             &trans  &trans     &trans  &trans  &trans  &trans      &trans  &trans
             >;
 
-            sensor-bindings = <&left_encoder_behavior>, <&right_encoder_behavior>;
+&left_encoder {
+    bindings = <&left_encoder_behavior>;
+};
+
+&right_encoder {
+    bindings = <&right_encoder_behavior>;
+};
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -295,8 +310,13 @@
 &kp DEL  &hm LGUI Z  &hm LALT X  &hm LCTRL C  &hm LSHFT D  &kp V      &kp K_MUTE  &kp LC(UP)  &hm RSHFT K  &hm RALT H   &hm RGUI COMMA  &hm RGUI DOT  &kp FSLH  &kp BSLH
                                  &kp DEL      &kp BSPC     &mo LOWER  &kp LALT    &tog 4      &mo RAISE    &kp SPACE    &kp RET
             >;
+&left_encoder {
+    bindings = <&left_encoder_behavior>;
+};
 
-            sensor-bindings = <&left_encoder_behavior>, <&right_encoder_behavior>;
+&right_encoder {
+    bindings = <&right_encoder_behavior>;
+};
         };
     };
 };
