@@ -172,7 +172,7 @@ label= "BASE"                                                  ;
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */ 
  bindings = <
  //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷
-bindings = <
+
          &kp Q       &kp W       &kp E        &kp R        &kp T                                   &kp Y        &kp U        &kp I           &kp O         &kp U
 &kp TAB  &kp A       &kp S       &kp D        &hm LSHFT F  &kp G                                   &kp H        &hm RSHFT J  &kp K           &kp L         &kp SEMI  &kp SQT
 &kp DEL  &hm LGUI Z  &hm LALT X  &hm LCTRL C  &hm LSHFT V  &kp B      &kp K_MUTE  &kp LC(UP)       &hm RSHFT N  &hm RALT M   &hm RGUI COMMA  &hm RGUI DOT  &kp FSLH  &kp BSLH
