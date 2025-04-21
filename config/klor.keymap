@@ -47,6 +47,28 @@
             label = "BCKLIGHT";
             #binding-cells = <2>;
         };
+        // Right Encoder: Volume Control + Mute
+        right_encoder_behavior: right_encoder_behavior {
+            compatible = "zmk,behavior-encoder";
+            bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>, <&kp C_MUTE>;
+        };
+        
+        // Left Encoder: RGB Brightness + Effect Cycle
+        left_encoder_behavior: left_encoder_behavior {
+            compatible = "zmk,behavior-encoder";
+            bindings = <&inc_dec_kp RGB_BRI_UP RGB_BRI_DN>, <&rgb_ug RGB_EFF>;
+        };
+    };
+};
+
+&left_encoder {
+    bindings = <&left_encoder_behavior>;
+};
+
+&right_encoder {
+    bindings = <&right_encoder_behavior>;
+};
+        };
     };
 
     combos {
@@ -159,7 +181,7 @@
                                  &kp DEL      &kp BSPC     &mo LOWER  &kp LALT    &rgb_ug RGB_EFF  &mo RAISE    &kp SPACE    &kp RET
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &kp C_MUTE &inc_dec_kp LC(LEFT) LC(RIGHT)>;
+            sensor-bindings = <&left_encoder_behavior>, <&right_encoder_behavior>;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -187,7 +209,7 @@
                                                &trans    &trans     &trans    &trans  &trans  &kp DELETE  &kp KP_N0  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LC(LEFT) LC(RIGHT)>;
+            sensor-bindings = <&left_encoder_behavior>, <&right_encoder_behavior>;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -215,7 +237,7 @@
                                                       &trans    &trans          &trans     &trans  &trans  &trans     &trans          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LC(LEFT) LC(RIGHT)>;
+            sensor-bindings = <&left_encoder_behavior>, <&right_encoder_behavior>;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -243,7 +265,7 @@
                             &trans  &trans     &trans  &trans  &trans  &trans      &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LC(LEFT) LC(RIGHT)>;
+            sensor-bindings = <&left_encoder_behavior>, <&right_encoder_behavior>;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -271,7 +293,7 @@
                                  &kp DEL      &kp BSPC     &mo LOWER  &kp LALT    &tog 4      &mo RAISE    &kp SPACE    &kp RET
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LC(LEFT) LC(RIGHT)>;
+            sensor-bindings = <&left_encoder_behavior>, <&right_encoder_behavior>;
         };
     };
 };
