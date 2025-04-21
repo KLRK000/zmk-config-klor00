@@ -175,7 +175,7 @@
 &kp DEL  &hm LGUI Z  &hm LALT X  &hm LCTRL C  &hm LSHFT V  &kp B      &kp K_MUTE  &kp LC(UP)       &hm RSHFT N  &hm RALT M   &hm RGUI COMMA  &hm RGUI DOT  &kp FSLH  &kp BSLH
                                  &kp DEL      &kp BSPC     &mo LOWER  &kp LALT    &rgb_ug RGB_EFF  &mo RAISE    &kp SPACE    &kp RET
                 >;
-            sensor-bindings = <&left_encoder_behavior>; <&right_encoder_behavior>;
+            sensor-bindings = <&left_encoder_behavior &right_encoder_behavior>;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
