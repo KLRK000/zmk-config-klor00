@@ -39,6 +39,17 @@
             bindings = <&kp>, <&kp>;
         };
 
+        rgb_ug: rgb_ug {
+            compatible = "zmk,behavior-rgb-underglow";
+            label = "RGB_UG";
+            #binding-cells = <2>;
+        };
+
+        bkl: bcklight {
+            compatible = "zmk,behavior-backlight";
+            label = "BCKLIGHT";
+            #binding-cells = <2>;
+        };
     };
 
      combos {
