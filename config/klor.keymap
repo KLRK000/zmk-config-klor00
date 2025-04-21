@@ -173,7 +173,7 @@ label= "BASE"                                                  ;
 
          &kp Q       &kp W       &kp E        &kp R        &kp T                                   &kp Y        &kp U        &kp I           &kp O         &kp P
 &kp TAB  &kp A       &kp S       &kp D        &hm LSHFT F  &kp G                                   &kp H        &hm RSHFT J  &kp K           &kp L         &kp SEMI  &kp SQT
-&kp DEL  &hm LGUI &kp Z  &hm LALT &kp X  &hm LCTRL &kp C  &hm LSHFT &kp V  &kp B      &kp K_MUTE  &lt LC UP       &hm RSHFT &kp N  &hm RALT &kp M   &hm RGUI &kp COMMA  &hm RGUI &kp DOT  &kp FSLH  &kp BSLH
+&kp DEL  &hm LGUI Z  &hm LALT X  &hm LCTRL C  &hm LSHFT V  &kp B      &kp K_MUTE  &lt LC UP       &hm RSHFT N  &hm RALT M   &hm RGUI COMMA  &hm RGUI DOT  &kp FSLH  &kp BSLH
                                  &kp DEL      &kp BSPC     &mo LOWER  &kp LALT    &rgb_ug RGB_EFF  &mo RAISE    &kp SPACE    &kp RET
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN >;
