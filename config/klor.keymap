@@ -24,22 +24,6 @@
 #define ADJUST 3
 #define COLE   4
 
-// ======== ADD ENCODER CONFIG HERE ========
-
-&sensors {
-    compatible = "zmk,keymap-sensors";
-    triggers-per-rotation = <15>; // Adjust if needed
-};
-
-/ {
-    encoder_behavior {
-        compatible = "zmk,behavior-encoder";
-        bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>, <&kp C_MUTE>;
-    };
-};
-
-// ======== END ENCODER CONFIG ========
-
 / {
     behaviors {
         hm: homerow_mods {
