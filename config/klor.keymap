@@ -24,7 +24,6 @@
 #define ADJUST 3
 #define COLE   4
 
-/ {
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
