@@ -26,7 +26,7 @@
 #define LOWER  1
 #define RAISE  2
 #define ADJUST 3
-#define QWERTY 4
+#define COLE   4
 
 // ======== ADD ENCODER CONFIG HERE ========
 &sensors {
@@ -158,20 +158,20 @@
 label= "BASE"                                                  ;
 // └───────────────────────────────────────────────────────────┘
 /*           ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
-             │    Q    │    W    │    F    │    P    │    B    │                    │    J    │    L    │    U    │    Y    │    ;    │   
+             │    Q    │    W    │    E    │    R    │    T    │                    │    Y    │    U    │    I    │    O    │    P    │   
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │   TAB   │    A    │    R    │    S    │    T    │    G    │                    │    M    │    N    │    E    │    I    │    O    │    "    │
+   │   TAB   │    A    │    S    │    D    │    F    │    G    │                    │    H    │    J    │    K    │    L    │    ;    │    "    │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │   DEL   │    Z    │    X    │    C    │    D    │    V    ││  MUTE  ││PLY/PSE ││    K    │    H    │    ,    │    .    │    /    │    \    │
+   │   DEL   │    Z    │    X    │    C    │    V    │    B    ││  MUTE  ││PLY/PSE ││    N    │    H    │    ,    │    .    │    /    │    \    │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │  DEL    │  BSPCE  │  LOWER  │   LOWER ││ TOG 4   │  SPACE  │  RAISE  │  ENTER  │  
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */ 
  bindings = <
  //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷
-              &kp Q     &kp W     &kp F     &kp P     &kp B                          &kp J     &kp L     &kp U     &kp Y     &kp SEMI
-    &kp TAB   &kp A          &kp R     &kp S   &hm LSHFT T &kp G                          &kp M   &hm RSHFT N &kp E     &kp I     &kp O     &kp SQT
-    &kp DEL   &hm LGUI Z     &hm LALT X     &hm LCTRL C     &hm LSHFT D     &kp V     &kp K_MUTE     &kp LC(UP)    &hm RSHFT K     &hm RALT H     &hm RGUI COMMA &hm RGUI DOT   &kp FSLH  &kp BSLH
-                                  &kp DEL &kp BSPC &mo LOWER &kp LALT &tog 4 &mo RAISE &kp SPACE &kp RET     
+              &kp Q     &kp W     &kp E     &kp R     &kp T                          &kp Y     &kp U     &kp I     &kp O     &kp U
+    &kp TAB   &kp A     &kp S     &kp D   &hm LSHFT F &kp G                          &kp H   &hm RSHFT J &kp K     &kp L     &kp SEMI     &kp SQT
+    &kp DEL   &hm LGUI Z     &hm LALT X     &hm LCTRL C     &hm LSHFT V     &kp B     &kp K_MUTE     &kp LC(UP)    &hm RSHFT N     &hm RALT M     &hm RGUI COMMA &hm RGUI DOT   &kp FSLH  &kp BSLH
+                                  &kp DEL &kp BSPC &mo LOWER &kp LALT   &trans  &mo RAISE &kp SPACE &kp RET     
                         >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &kp C_MUTE &inc_dec_kp LC(LEFT) LC(RIGHT)>;
                 };
@@ -257,25 +257,25 @@ label= "ADJUST"                                                ;
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
-                qwerty_layer {
+                cole_layer {
 // ┌───────────────────────────────────────────────────────────┐
-label= "QWERTY"                                                ;
+label= "COLE"                                                ;
 // └───────────────────────────────────────────────────────────┘
 /*           ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
-             │    Q    │    W    │    E    │    R    │    T    │                    │    Y    │    U    │    I    │    O    │    P    │   
+             │    Q    │    W    │    F    │    P    │    B    │                    │    J    │    L    │    U    │    Y    │    ;    │   
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │   TAB   │    A    │    S    │    D    │    F    │    G    │                    │    H    │    J    │    K    │    L    │    ;    │    "    │
+   │   TAB   │    A    │    R    │    S    │    T    │    G    │                    │    M    │    N    │    E    │    I    │    O    │    "    │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │   DEL   │    Z    │    X    │    C    │    V    │    B    ││  MUTE  ││PLY/PSE ││    N    │    H    │    ,    │    .    │    /    │    \    │
+   │   DEL   │    Z    │    X    │    C    │    D    │    V    ││  MUTE  ││PLY/PSE ││    K    │    H    │    ,    │    .    │    /    │    \    │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │  DEL    │  BSPCE  │  LOWER  │   LOWER ││ TOG 4   │  SPACE  │  RAISE  │  ENTER  │  
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */ 
  bindings = <
  //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷
-              &kp Q     &kp W     &kp E     &kp R     &kp T                          &kp Y     &kp U     &kp I     &kp O     &kp U
-    &kp TAB   &kp A     &kp S     &kp D   &hm LSHFT F &kp G                          &kp H   &hm RSHFT J &kp K     &kp L     &kp SEMI     &kp SQT
-    &kp DEL   &hm LGUI Z     &hm LALT X     &hm LCTRL C     &hm LSHFT V     &kp B     &kp K_MUTE     &kp LC(UP)    &hm RSHFT N     &hm RALT M     &hm RGUI COMMA &hm RGUI DOT   &kp FSLH  &kp BSLH
-                                  &kp DEL &kp BSPC &mo LOWER &kp LALT   &trans  &mo RAISE &kp SPACE &kp RET     
+              &kp Q     &kp W     &kp F     &kp P     &kp B                          &kp J     &kp L     &kp U     &kp Y     &kp SEMI
+    &kp TAB   &kp A          &kp R     &kp S   &hm LSHFT T &kp G                          &kp M   &hm RSHFT N &kp E     &kp I     &kp O     &kp SQT
+    &kp DEL   &hm LGUI Z     &hm LALT X     &hm LCTRL C     &hm LSHFT D     &kp V     &kp K_MUTE     &kp LC(UP)    &hm RSHFT K     &hm RALT H     &hm RGUI COMMA &hm RGUI DOT   &kp FSLH  &kp BSLH
+                                  &kp DEL &kp BSPC &mo LOWER &kp LALT &tog 4 &mo RAISE &kp SPACE &kp RET     
                         >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &kp C_MUTE &inc_dec_kp LC(LEFT) LC(RIGHT)>;
                 };
