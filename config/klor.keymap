@@ -34,7 +34,8 @@
     };
 
     right_encoder {
-        sensor-bindings = <&inc_dec_kp &rgb_ug RGB_SAI &rgb_ug RGB_SAD>;
+        compatible = "zmk,behavior-sensor-rotate";
+        bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_SAD>;
     };
 };
 
