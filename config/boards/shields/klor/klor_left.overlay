@@ -19,4 +19,5 @@
 
 &left_encoder {
 	status = "okay";
+	#sensor-binding-cells = <1>;  // REQUIRED for ZMK sensor behaviors
 };
