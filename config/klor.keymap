@@ -31,9 +31,10 @@
 / {
     sensors {
         compatible = "zmk,keymap-sensors";
-        
+
         left_encoder {
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            compatible = "zmk,behavior-sensor-rotate";
+            bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         right_encoder {
