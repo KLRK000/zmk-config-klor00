@@ -23,4 +23,5 @@
 
 &right_encoder {
 	status = "okay";
+	#sensor-binding-cells = <1>;  // Add this line
 };
