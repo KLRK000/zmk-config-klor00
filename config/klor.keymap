@@ -28,7 +28,7 @@
 #define ADJUST  3
 #define COLE    4
 
-
+&sensors {
     left_encoder {
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
@@ -36,6 +36,7 @@
     right_encoder {
         sensor-bindings = <&inc_dec_kp &rgb_ug RGB_SAI &rgb_ug RGB_SAD>;
     };
+};
 
 / {
     behaviors {
